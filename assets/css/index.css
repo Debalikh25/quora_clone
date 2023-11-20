@@ -1,0 +1,41 @@
+.login-form {
+    
+    border-left: 2px solid grey;
+    padding : 30px;
+}
+
+.register-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.register-form {
+
+   
+  margin-top : 30px;
+    border : 2px solid grey;
+    padding : 30px;
+
+}
+
+#quora-container {
+
+    margin-top : 30px;
+    padding : 20px;
+    border : 1px solid grey;
+    box-shadow: 5px 10px #888888;
+    background-color: rgb(241, 242, 242);
+    border-radius: 10px;
+}
+
+#quora-container {
+    padding : 20px;
+    border : 1px solid grey;
+    box-shadow: 5px 10px #888888;
+    background-color: rgb(241, 242, 242);
+    border-radius: 10px;
+}

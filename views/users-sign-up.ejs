@@ -1,0 +1,55 @@
+<link rel="stylesheet" type="text/css" href="/css/index.css" />
+
+<div class="container register-container">
+  <form action="/users/sign-up" class="register-form" method="post">
+    <div class="mb-3">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        name="name"
+        class="form-control"
+        placeholder="Enter Name"
+        id="name"
+        required
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="email">Email</label>
+      <input
+        type="text"
+        name="email"
+        class="form-control"
+        placeholder="Enter Email"
+        id="email"
+        required
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        name="password"
+        class="form-control"
+        placeholder="Enter Password"
+        id="password"
+        required
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="cpassword">Confirm Password</label>
+      <input
+        type="password"
+        name="cpassword"
+        class="form-control"
+        placeholder="Confirm Password"
+        id="cpassword"
+        required
+      />
+    </div>
+
+    <input type="submit" class="btn btn-success mt-3" value="Sign Up" />
+  </form>
+</div>

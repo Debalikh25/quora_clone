@@ -1,0 +1,54 @@
+<link rel="stylesheet" type="text/css" href="/css/social-btn-google.css" />
+<link rel="stylesheet" type="text/css" href="/css/index.css" />
+
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-5">
+      <div class="google-btn">
+        <div class="google-icon-wrapper">
+          <img
+            class="google-icon"
+            src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+          />
+        </div>
+        <a href= "/users/auth/google" class="btn-text"><b>Sign in with google</b></a>
+      </div>
+      <div class="mt-2">
+        <a  href="/users/sign-up">Sign Up With Email Manually</a>
+      </div>
+    
+
+
+    </div>
+
+    <div class="col-md-5">
+      <form action="/users/sign-in" class="login-form" method="post">
+        <div class="mb-3">
+          <label for="email">Email</label>
+          <input
+            type="text"
+            name="email"
+            class="form-control"
+            placeholder="Enter Email"
+            id="email"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            class="form-control"
+            placeholder="Enter Password"
+            id="password"
+            required
+          />
+        </div>
+
+        <input type="submit" class="btn btn-info mt-3" value="Sign In" />
+      </form>
+    </div>
+  </div>
+</div>

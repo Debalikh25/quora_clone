@@ -1,0 +1,151 @@
+<link rel="stylesheet" type="text/css" href="/css/index.css" />
+<div class="container mt-3">
+  <section id="profile-section">
+    <h3>Profile</h3>
+
+    <% if(locals.user._id == user._id){ %>
+
+    <div class="row">
+      <div class="col-md-7">
+        <div id="quora-container">
+          <h5>Update Your Profile</h5>
+          <form>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="mt-3">
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    value="<%= locals.user.name %>"
+                    placeholder="Update your name"
+                    class="form-control"
+                    name="name"
+                    id="name"
+                    required
+                  />
+                </div>
+
+                <div class="mt-3">
+                  <label for="profession">Profession</label>
+                  <input
+                    type="text"
+                    value="<% locals.user.profession == null ? '' : locals.user.profession  %>"
+                    placeholder="Update your profession"
+                    class="form-control"
+                    name="profession"
+                    id="profession"
+                    required
+                  />
+                </div>
+
+                <div class="mt-3">
+                  <label for="city">City</label>
+                  <input
+                    type="text"
+                    value="<% locals.user.city == null ? '' : locals.user.city  %>"
+                    placeholder="Update your city"
+                    class="form-control"
+                    name="city"
+                    id="city"
+                    required
+                  />
+                </div>
+
+                <div class="mt-3">
+                  <label for="state">State</label>
+                  <input
+                    type="text"
+                    value="<% locals.user.state == null ? '' : locals.user.state  %>"
+                    placeholder="Update your state"
+                    class="form-control"
+                    name="state"
+                    id="state"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="mt-3">
+                  <label for="country">Country</label>
+                  <input
+                    type="text"
+                    value="<% locals.user.country == null ? '' : locals.user.country  %>"
+                    placeholder="Update your country"
+                    class="form-control"
+                    name="country"
+                    id="country"
+                    required
+                  />
+                </div>
+
+                <div class="mt-3">
+                  <label for="state">School/College</label>
+                  <input
+                    type="text"
+                    value="<% locals.user.education == null ? '' : locals.user.education  %>"
+                    placeholder="Update your school/college"
+                    class="form-control"
+                    name="education"
+                    id="education"
+                    required
+                  />
+                </div>
+
+                <div class="mt-3">
+                  <label for="bio">Bio</label>
+                  <textarea
+                    value="<% locals.user.bio == null ? '' : locals.user.bio  %>"
+                    placeholder="Update your Bio"
+                    class="form-control"
+                    name="bio"
+                    id="bio"
+                    required
+                  ></textarea>
+                  <small>Not More than 10 words</small>
+                </div>
+
+                <div class="mt-3">
+                  <label for="avatar">Profile Pic</label>
+                  <input
+                    type="file"
+                    name="avatar"
+                    class="form-control"
+                    id="avatar"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <input type="submit" value="Update" class="btn btn-info mt-3" />
+          </form>
+        </div>
+      </div>
+
+      <div class="col-md-5">
+        <div id="quora-container" class="mt-4">
+          <% if(questions.length == 0){ %>
+
+          <h5>No Questions Posted.</h5>
+
+          <% } else { %>
+          <ul>
+            <% for(let question of questions){ %>
+
+            <li><%= question.question %></li>
+
+            <% } %>
+          </ul>
+
+          <% } %>
+        </div>
+      </div>
+    </div>
+
+    <% } else { %>
+
+    <div id="other-profile"></div>
+
+    <% } %>
+  </section>
+</div>
